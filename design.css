@@ -12,9 +12,10 @@ body {
 }
 
 #palette {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 4fr);  
+    gap: 1px;
+    height: 10px;
 }
 
 .color.selected {
@@ -32,6 +33,15 @@ body {
     display: grid;
     grid-template-columns: repeat(29, 23px);
     grid-template-rows: repeat(29, 23px);
+}
+
+#undoButton{
+    align-items: center;
+    height: 40px;
+    width: 170px;
+    font-size: 150%;
+    background-color: black;
+    color: white;
 }
 
 .dot {

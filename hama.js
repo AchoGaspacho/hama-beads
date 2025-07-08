@@ -1,9 +1,9 @@
 const grid = document.getElementById("grid")
 const palette = document.getElementById("palette")
-
 const rows = 29
 const cols = 29
-const colors = ["white", "lightyellow", "gold", "orange", "red", "pink", "purple", "rebeccapurple", "blue", "green", "lightseagreen", "brown", "gray", "black"]
+const colors = ["white", "#fdffcc", "gold", "#f6ff39", "#ceff5c","#64fc35", "#17ab4b", "#0d5b28", "#139bbd", "#52c0ff", "#0026ff", "#0e009c", 
+    "#6c41ff", "#ea25fa", "#f9abff", "#ebe4d1", "#ffcd00", "#ff0000", "#995843","#9d6228", "#573c22","#888888", "#575757", "#000000" ]
 let selectedColor = colors[0];
 
 const undoStack = [];
@@ -49,15 +49,7 @@ document.getElementById("undoButton").addEventListener("click", () => {
         });
         palette.appendChild(colorDiv);
     });
-    for (let i = 0; i < rows * cols; i++) {
-        const dot = document.createElement("div");
-        dot.classList.add("dot");
-        dot.addEventListener("click", () => {
-            dot.style.backgroundColor = selectedColor;
-        });
-        grid.appendChild(dot);
-    }
     
     
     
-    
+     
